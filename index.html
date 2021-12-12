@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-color: rgb(3, 3, 51);">
+        <h1 style = "color: white;"> Belly Button Biodiversity Dashboard</h1>
+        <p style = "color: white;">Explore the biodiversity of belly button bacteria using these different charts and tools.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="background-color: rgb(3, 3, 51);">
+          <h5 style = "color: white;">Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading" style="background-color: rgb(3, 3, 51);">
+            <h3 class="panel-title" style="background-color: rgb(3, 3, 51);">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p>See a comparison of the top ten bacteria cultures.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p>How often does each particpant wash? Find out with this gauge chart.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>Compare the bacteria culture per sample with this bubble chart.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/charts.js"></script>
+  
+</body>
+
+</html>
